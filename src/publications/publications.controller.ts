@@ -23,7 +23,7 @@ export class PublicationsController {
   }
 
   @Put(':id')
-  update(@Param('id') id: string, @Body() updatePublicationDto: UpdatePublicationDto) {
+  update(@Param('id') id: string, @Body() updatePublicationDto: CreatePublicationDto) {
     return this.publicationsService.update(+id, updatePublicationDto);
   }
 

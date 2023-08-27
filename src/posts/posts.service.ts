@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
 import { CreatePostDto } from './dto/create-post.dto';
 import { UpdatePostDto } from './dto/update-post.dto';
 import { postsRepository } from './posts.repository';
@@ -38,9 +38,10 @@ export class PostsService {
   }
 
   async remove(id: number) {
-    //O post só pode ser deletado se não estiver fazendo parte de nenhuma publicação (agendada ou publicada). Neste caso, retornar o status code 403 Forbidden.
     const post = await this.repository.getPostsById(id);
     if(!post) throw new NotFoundException()
+    const postPubli = await this.repository.findPublicationPost(id);
+    if(postPubli) throw new ForbiddenException(); 
     return await this.repository.deletePost(id);
   }
 }

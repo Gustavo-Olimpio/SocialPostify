@@ -34,4 +34,11 @@ export class postsRepository {
             }
         })
     }
+    findPublicationPost(id:number){
+        return this.prisma.publications.findFirst({
+            where:{
+                postId:id
+            }
+        })
+    }
 };
