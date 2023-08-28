@@ -12,6 +12,7 @@ export class PublicationsRepository {
     }
     getPubli(){
         return this.prisma.publications.findMany();
+         
     }
     getPubliById(id:number){
         return this.prisma.publications.findFirst({
