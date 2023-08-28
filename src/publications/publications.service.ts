@@ -16,32 +16,20 @@ export class PublicationsService {
   }
 
   async findAll(isPublished: string, after: string) {
-    let published = undefined
-    if(isPublished === 'true' || isPublished=== 'false'){
-      published = isPublished === 'true'
+    let array = await this.repository.getPubli();
+    const dateNow = new Date();
+    // Filtra com base em 'isPublished' se necessário
+    if (isPublished === 'true' || isPublished === 'false') {
+      const isPublishedBool = isPublished === 'true';
+      array = array.filter((e) =>
+        isPublishedBool ? new Date(e.date) < dateNow : new Date(e.date) > dateNow
+      );
     }
-    const array = await this.repository.getPubli();
-    let arrayFilter = []
-    if (published !== undefined && after !== undefined) {
-      const dateNow = new Date()
-      if (published === true) {
-        arrayFilter = array.filter((e) => new Date(e.date).getTime() < dateNow.getTime())
-      } else {
-        arrayFilter = array.filter((e) => new Date(e.date).getTime() > dateNow.getTime())
-      }
-      return arrayFilter.filter((e) => new Date(e.date).getTime() > new Date(after).getTime())
-    } else if (published !== undefined) {
-      const dateNow = new Date()
-      if (published === true) {
-        arrayFilter = array.filter((e) => new Date(e.date).getTime() < dateNow.getTime())
-      } else {
-        arrayFilter = array.filter((e) => new Date(e.date).getTime() > dateNow.getTime())
-      }
-      return arrayFilter
-    } else if (after !== undefined) {
-      return array.filter((e) => new Date(e.date).getTime() > new Date(after).getTime())
+    // Filtra com base em 'after' se necessário
+    if (after) {
+      array = array.filter((e) => new Date(e.date) > new Date(after));
     }
-    return array
+    return array;
   }
 
   async findOne(id: number) {
