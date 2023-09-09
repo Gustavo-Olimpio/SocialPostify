@@ -15,17 +15,17 @@ O **SocialPostify** é uma ferramenta de agendamento de posts em redes sociais p
 
 **Principais Características:**
 
--**Segurança Avançada:** Implementamos um sistema de cadastro e login seguro, utilizando JWT (JSON Web Tokens) com tokens completos que expiram, garantindo a proteção de suas informações.
+- **Segurança Avançada:** Implementamos um sistema de cadastro e login seguro, utilizando JWT (JSON Web Tokens) com tokens completos que expiram, garantindo a proteção de suas informações.
 
--**Gerenciamento de Redes Sociais:** Com nosso sistema de CRUD, você pode salvar suas redes sociais e nomes de usuário, permitindo fácil manipulação desses dados.
+- **Gerenciamento de Redes Sociais:** Com nosso sistema de CRUD, você pode salvar suas redes sociais e nomes de usuário, permitindo fácil manipulação desses dados.
 
--**Agendamento de Posts:** Crie posts com títulos e conteúdo personalizado e agende-os para serem compartilhados em suas redes sociais, com a opção de programação para datas específicas.
+- **Agendamento de Posts:** Crie posts com títulos e conteúdo personalizado e agende-os para serem compartilhados em suas redes sociais, com a opção de programação para datas específicas.
 
--**Filtragem Avançada:** Use nosso sistema de filtragem para encontrar facilmente as informações que você precisa, economizando tempo e melhorando a experiência do usuário.
+- **Filtragem Avançada:** Use nosso sistema de filtragem para encontrar facilmente as informações que você precisa, economizando tempo e melhorando a experiência do usuário.
 
--**Funcionalidades de Bloqueio:** Adicionamos funcionalidades de bloqueio para aumentar ainda mais a segurança, garantindo que suas informações pessoais permaneçam protegidas.
+- **Funcionalidades de Bloqueio:** Adicionamos funcionalidades de bloqueio para aumentar ainda mais a segurança, garantindo que suas informações pessoais permaneçam protegidas.
 
--**Testes Automatizados:** Todas as nossas rotas são testadas e validadas, garantindo a integridade e o funcionamento adequado do sistema.
+- **Testes Automatizados:** Todas as nossas rotas são testadas e validadas, garantindo a integridade e o funcionamento adequado do sistema.
 
 ### Motivação
 
