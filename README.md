@@ -80,33 +80,33 @@ Para rodar o SocialPostify em sua máquina local, siga estas etapas:
 
 1. Clone o repositório para sua máquina:
 
-  ```bash
+    ```bash
     git clone https://github.com/seu-usuario/socialpostify.git
-  ```
+    ```
 2. Acesse o diretório do projeto:
-  ```bash
+    ```bash
     cd socialpostify
-  ```
+    ```
 3. Instale as dependências do projeto utilizando o npm:
-  ```bash
-  npm install
-  ```
+    ```bash
+    npm install
+    ```
 4. Crie um arquivo .env na raiz do projeto com as seguintes variáveis de ambiente:
   env
-  ```bash
+    ```bash
     DATABASE_URL="sua-url-do-banco-de-dados"
     JWT_SECRET="sua-chave-secreta-jwt"
-  ```
+    ```
 Certifique-se de substituir "sua-url-do-banco-de-dados" pela URL do seu banco de dados e "sua-chave-secreta-jwt" por uma chave secreta para JWT.
 
 5. Execute as migrações do banco de dados para criar as tabelas necessárias:
-  ```bash
+    ```bash
     npx prisma migrate dev
-  ```
+    ```
 6. Inicie o servidor:
-  ```bash
+    ```bash
     npm start
-  ```
+    ```
 O SocialPostify estará rodando em http://localhost:3000. Você pode acessar o aplicativo em seu navegador.
 
 Certifique-se de ter o Node.js, npm e o Prisma instalados em sua máquina antes de prosseguir com essas etapas.
