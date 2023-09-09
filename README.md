@@ -112,3 +112,30 @@ O SocialPostify estará rodando em http://localhost:3000. Você pode acessar o a
 Certifique-se de ter o Node.js, npm e o Prisma instalados em sua máquina antes de prosseguir com essas etapas.
 
 Agora você pode começar a usar o SocialPostify localmente!
+
+## Como Rodar Testes
+
+Para executar os testes do SocialPostify, siga estas etapas:
+
+1. Crie um arquivo `.env.test` na raiz do projeto com as seguintes variáveis de ambiente específicas para o ambiente de teste:
+
+   env
+     ```bash
+        DATABASE_URL="sua-url-do-banco-de-dados-de-teste"
+        JWT_SECRET="sua-chave-secreta-jwt-de-teste"
+     ```
+Certifique-se de substituir "sua-url-do-banco-de-dados-de-teste" pela URL do seu banco de dados de teste e "sua-chave-secreta-jwt-de-teste" por uma chave secreta específica para o ambiente de teste.
+
+2. Execute as migrações do banco de dados de teste para criar as tabelas necessárias:
+    ```bash
+        npx prisma migrate dev --env=test
+    ```
+3. Execute os testes E2E com o seguinte comando:
+     ```bash
+        npm run test:e2e
+     ```
+Isso executará os testes de ponta a ponta (E2E) no ambiente de teste, garantindo que as funcionalidades do SocialPostify estejam funcionando conforme o esperado.
+
+Certifique-se de ter o Node.js, npm e o Prisma instalados em sua máquina antes de prosseguir com essas etapas.
+
+Com essas instruções, você poderá rodar e testar o SocialPostify com facilidade no ambiente de desenvolvimento e teste.
