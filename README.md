@@ -82,7 +82,7 @@ Para rodar o SocialPostify em sua máquina local, siga estas etapas:
 
   ```bash
   git clone https://github.com/seu-usuario/socialpostify.git
-
+  ```
 Acesse o diretório do projeto:
   ```bash
   cd socialpostify
